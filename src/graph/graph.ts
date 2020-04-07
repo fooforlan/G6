@@ -1215,7 +1215,6 @@ export default class Graph extends EventEmitter implements IGraph {
         if (!child) {
           return false
         }
-
         const childItem = itemMap[child.id];
         if (childItem && childItem.getType() === 'combo') {
           itemController.updateCombo(childItem, child.children);
