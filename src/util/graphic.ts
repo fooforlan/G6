@@ -506,7 +506,7 @@ export const reconstructTree = (trees: ComboTree[], subtreeId?: string, newParen
       brothers = comboChilds[child.parentId || 'root'].children
       if (child && (child.removed || subtreeId === child.id) && brothers) {
         subtree = child;
-        subtree.parentId = newParentId
+        subtree.parentId = newParentId;
         const index = brothers.indexOf(child);
         brothers.splice(index, 1);
       }
@@ -534,7 +534,6 @@ export const reconstructTree = (trees: ComboTree[], subtreeId?: string, newParen
       trees.push(subtree);
     }
   }
-  console.log('xxx', trees)
   return trees;
 }
 
