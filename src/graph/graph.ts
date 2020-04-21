@@ -1499,12 +1499,12 @@ export default class Graph extends EventEmitter implements IGraph {
             animateCfg.callback();
           }
 
-          if (combos && combos.length !== 0) {
-            // combos.forEach(combo => {
-            //   if (comboVisibilityMap[combo.getModel().id]) combo.show();
-            // });
-            self.updateCombos();
-          }
+          // if (combos && combos.length !== 0) {
+          //   // combos.forEach(combo => {
+          //   //   if (comboVisibilityMap[combo.getModel().id]) combo.show();
+          //   // });
+          //   self.updateCombos();
+          // }
 
           self.emit('afteranimate');
           self.animating = false;
@@ -1758,13 +1758,8 @@ export default class Graph extends EventEmitter implements IGraph {
     const itemController: ItemController = this.get('itemController');
     itemController.collapseCombo(combo);
     // update combo size
-    itemController.updateCombo(combo, []);
+    // itemController.updateCombo(combo, []);
     comboModel.collapsed = true;
-    // update combo layout
-    // const layoutController = this.get('layoutController');
-    // if (layoutController.layoutMethod) {
-    //   layoutController.adjustComboLayout(comboModel.id);
-    // }
   }
 
   /**
@@ -1792,7 +1787,7 @@ export default class Graph extends EventEmitter implements IGraph {
       });
     });
     // update combo size
-    itemController.updateCombo(combo, children);
+    // itemController.updateCombo(combo, children);
     comboModel.collapsed = false;
   }
 
