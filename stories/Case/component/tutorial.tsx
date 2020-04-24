@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import G6 from '../../../src';
 import { IGraph } from '../../../src/interface/graph';
-import { testData } from './test-data';
 import { GraphData } from '../../../src/types';
 
 
@@ -602,8 +601,7 @@ const Tutorial = () => {
           'https://gw.alipayobjects.com/os/basement_prod/6cae02ab-4c29-44b2-b1fd-4005688febcb.json',
         );
         // const data = await response.json();
-        const data = testData as GraphData;
-        console.log(testData);
+        const data = response as GraphData;
         const nodes = data.nodes;
         const edges = data.edges;
         nodes.forEach(node => {
